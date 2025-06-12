@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Living E-Society - Next-Gen Co-Living</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Package Section Styling */
+      .subscription-packages {
+        background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        padding: 4rem 0;
+        padding-top: 70px; /* Add top padding to account for fixed navbar */
+      }
+
+      /* Package Tabs Styling */
+      #package-tabs {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      #package-tabs .list-group-item {
+        border: none;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+      }
+
+      #package-tabs .list-group-item:last-child {
+        border-bottom: none;
+      }
+
+      #package-tabs .list-group-item.active {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        border: none;
+        transform: scale(1.02);
+      }
+
+      #package-tabs .list-group-item.active .text-muted {
+        color: rgba(255, 255, 255, 0.8) !important;
+      }
+
+      #package-tabs .list-group-item:hover:not(.active) {
+        background: #f8f9fa;
+        transform: translateX(5px);
+      }
+
+      /* Package Content Styling */
+      .package-content {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Add scroll margin to tab panes */
+      .tab-pane {
+        scroll-margin-top: 100px; /* Adjust scroll margin for tab panes */
+      }
+
+      .package-content h2 {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 1rem;
+      }
+
+      .package-content h2:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: #007bff;
+        border-radius: 2px;
+      }
+
+      .package-content .lead {
+        color: #6c757d;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      /* Features List Styling */
+      .features-list {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .features-list h4 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .features-list ul li {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .features-list ul li:last-child {
+        border-bottom: none;
+      }
+
+      .features-list ul li i {
+        margin-top: 0.3rem;
+        font-size: 1.1rem;
+      }
+
+      .features-list ul li strong {
+        color: #2c3e50;
+        margin-bottom: 0.3rem;
+        display: block;
+      }
+
+      /* Service Gallery Styling */
+      .service-gallery {
+        margin: 2rem 0;
+      }
+
+      .service-gallery h4 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .service-gallery .card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        height: 100%;
+      }
+
+      .service-gallery .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-gallery .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .service-gallery .card-body {
+        padding: 1.5rem;
+        background: white;
+      }
+
+      .service-gallery .card-text {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .service-gallery .card-text strong {
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      /* Button Styling */
+      .btn-primary {
+        padding: 1rem 2rem;
+        font-weight: 600;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .subscription-packages {
+          padding: 2rem 0;
+        }
+
+        .package-content {
+          padding: 1.5rem;
+          margin-top: 2rem;
+        }
+
+        .service-gallery .card-img-top {
+          height: 180px;
+        }
+      }
+
+      /* Additional Responsive Styles for Mobile and Tablet */
+      @media (max-width: 768px) {
+        /* Package Tabs Styling for Tablet */
+        #package-tabs {
+          margin-bottom: 2rem;
+        }
+
+        #package-tabs .list-group-item {
+          padding: 1rem;
+        }
+
+        #package-tabs .list-group-item h5 {
+          font-size: 1rem;
+        }
+
+        /* Package Content Styling for Tablet */
+        .package-content h2 {
+          font-size: 1.75rem;
+        }
+
+        .package-content .lead {
+          font-size: 1rem;
+        }
+
+        .features-list {
+          padding: 1rem;
+        }
+
+        .features-list h4 {
+          font-size: 1.25rem;
+        }
+
+        .features-list ul li {
+          font-size: 0.9rem;
+          padding: 0.6rem 0;
+        }
+
+        .service-gallery .card {
+          margin-bottom: 1rem;
+        }
+
+        .service-gallery .card-text {
+          font-size: 0.85rem;
+        }
+
+        .btn-primary {
+          padding: 0.75rem 1.5rem;
+          font-size: 0.9rem;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Mobile Specific Styles */
+        .subscription-packages {
+          padding: 1rem 0;
+        }
+
+        .package-content {
+          padding: 1rem;
+          margin-top: 1rem;
+        }
+
+        /* Package Tabs Styling for Mobile */
+        #package-tabs .list-group-item {
+          padding: 0.75rem;
+        }
+
+        #package-tabs .list-group-item h5 {
+          font-size: 0.9rem;
+          margin-bottom: 0.25rem;
+        }
+
+        #package-tabs .list-group-item p {
+          font-size: 0.8rem;
+        }
+
+        /* Package Content Styling for Mobile */
+        .package-content h2 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .package-content .lead {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .features-list {
+          padding: 0.75rem;
+          margin: 1rem 0;
+        }
+
+        .features-list h4 {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+
+        .features-list ul li {
+          font-size: 0.85rem;
+          padding: 0.5rem 0;
+        }
+
+        .features-list ul li i {
+          font-size: 0.9rem;
+        }
+
+        /* Service Gallery Styling for Mobile */
+        .service-gallery {
+          margin: 1rem 0;
+        }
+
+        .service-gallery h4 {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+
+        .service-gallery .card-img-top {
+          height: 160px;
+        }
+
+        .service-gallery .card-body {
+          padding: 0.75rem;
+        }
+
+        .service-gallery .card-text {
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
+
+        .service-gallery .card-text strong {
+          font-size: 0.9rem;
+        }
+
+        /* Button Styling for Mobile */
+        .btn-primary {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.85rem;
+          width: 100%;
+          margin-top: 1rem;
+        }
+
+        /* Back to Top Button for Mobile */
+        .back-to-top-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 0.9rem;
+          margin: 1rem;
+        }
+      }
+
+      /* Extra Small Devices (320px and below) */
+      @media (max-width: 320px) {
+        .package-content h2 {
+          font-size: 1.3rem;
+        }
+
+        .package-content .lead {
+          font-size: 0.85rem;
+        }
+
+        .features-list ul li {
+          font-size: 0.8rem;
+        }
+
+        .service-gallery .card-img-top {
+          height: 140px;
+        }
+
+        .service-gallery .card-text {
+          font-size: 0.75rem;
+        }
+
+        .btn-primary {
+          font-size: 0.8rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <div id="navbar"></div>
+    </header>
+    <section id="about-hero">
+      <div class="about-hero-container">
+        <h2>packages</h2>
+      </div>
+    </section>
+
+    <!-- Subscription Packages Section -->
+    <section class="subscription-packages py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Left Side - Package Selection Tabs -->
+          <div class="col-lg-3">
+            <div class="list-group" id="package-tabs" role="tablist">
+              <a
+                class="list-group-item list-group-item-action active"
+                id="basic-tab"
+                data-bs-toggle="list"
+                href="#basic"
+                role="tab"
+              >
+                <h5 class="mb-1">Basic Living</h5>
+                <p class="mb-0 text-muted">₹15,000/month</p>
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                id="premium-tab"
+                data-bs-toggle="list"
+                href="#premium"
+                role="tab"
+              >
+                <h5 class="mb-1">Premium Living</h5>
+                <p class="mb-0 text-muted">₹25,000/month</p>
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                id="luxury-tab"
+                data-bs-toggle="list"
+                href="#luxury"
+                role="tab"
+              >
+                <h5 class="mb-1">Luxury Living</h5>
+                <p class="mb-0 text-muted">₹40,000/month</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side - Package Details -->
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <!-- Basic Package -->
+              <div class="tab-pane fade show active" id="basic" role="tabpanel">
+                <div class="package-content">
+                  <h2 class="mb-4">Basic Living Package</h2>
+                  <p class="lead mb-4">
+                    Perfect for students and young professionals who value
+                    comfort and convenience without breaking the bank. Our Basic
+                    Living Package offers essential amenities in a modern,
+                    well-maintained environment, ensuring a hassle-free living
+                    experience. Ideal for those who prioritize functionality and
+                    community living while maintaining a budget-conscious
+                    approach.
+                  </p>
+
+                  <div class="features-list mb-4">
+                    <h4>Package Features:</h4>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Single Occupancy Room:</strong> A cozy,
+                        well-ventilated private room (120 sq. ft.) with
+                        essential furniture including a study desk, wardrobe,
+                        and comfortable bed. Natural lighting and modern
+                        ventilation system.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Nutritious Meals:</strong> Two wholesome meals
+                        daily (Breakfast & Dinner) prepared by professional
+                        chefs. Menu includes Indian and continental options,
+                        with special attention to dietary requirements.
+                        Breakfast served 7:00-9:00 AM, Dinner 7:00-9:30 PM.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Weekly Housekeeping:</strong> Professional
+                        cleaning service every Saturday, including room
+                        cleaning, bed linen change, and bathroom sanitization.
+                        Additional cleaning supplies provided for daily
+                        maintenance.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Basic Maintenance Support:</strong> 24/7
+                        maintenance assistance for electrical, plumbing, and
+                        general repairs. Response time within 2 hours for urgent
+                        issues. Regular preventive maintenance checks conducted
+                        monthly.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>High-Speed WiFi:</strong> Reliable 50 Mbps
+                        internet connection with dedicated bandwidth per room.
+                        Coverage throughout the premises including common areas.
+                        Technical support available during working hours.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>24/7 Security:</strong> Round-the-clock security
+                        personnel, CCTV surveillance in common areas, and secure
+                        access control system. Regular security patrols and
+                        visitor management system in place.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="service-gallery mb-4">
+                    <h4>Included Services:</h4>
+                    <div class="row g-4">
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Modern Single Room"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Modern Single Room</strong>
+                              Spacious 120 sq. ft. room with ergonomic
+                              furniture, ample storage, and modern amenities.
+                              Features include a study desk, wardrobe, and
+                              comfortable bed with premium mattress.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Healthy Meals"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Nutritious Dining</strong>
+                              Wholesome meals prepared by professional chefs
+                              using fresh, locally-sourced ingredients. Special
+                              attention to nutritional balance and dietary
+                              preferences.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Professional Cleaning"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Weekly Cleaning</strong>
+                              Professional cleaning service with eco-friendly
+                              products. Includes thorough sanitization, linen
+                              change, and maintenance of personal space.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="High-Speed Internet"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Reliable Internet</strong>
+                              High-speed 50 Mbps WiFi with dedicated bandwidth.
+                              Perfect for online classes, work from home, and
+                              entertainment needs.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Security System"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Advanced Security</strong>
+                              24/7 security personnel, CCTV surveillance, and
+                              secure access control. Regular security audits and
+                              emergency response system.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Maintenance Support"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Quick Maintenance</strong>
+                              Professional maintenance team available 24/7 for
+                              electrical, plumbing, and general repairs.
+                              Preventive maintenance checks monthly.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="btn btn-primary btn-lg">
+                    Select Basic Package - ₹15,000/month
+                  </button>
+                </div>
+              </div>
+
+              <!-- Premium Package -->
+              <div class="tab-pane fade" id="premium" role="tabpanel">
+                <div class="package-content">
+                  <h2 class="mb-4">Premium Living Package</h2>
+                  <p class="lead mb-4">
+                    Designed for discerning professionals who seek enhanced
+                    comfort and premium amenities. Our Premium Living Package
+                    combines luxury with functionality, offering an elevated
+                    living experience with additional services and exclusive
+                    access to premium facilities. Perfect for executives and
+                    professionals who value quality and convenience in their
+                    living space.
+                  </p>
+
+                  <div class="features-list mb-4">
+                    <h4>Package Features:</h4>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Deluxe Single Room:</strong> Spacious 180 sq.
+                        ft. premium room with modern furniture, premium bedding,
+                        and smart home features. Includes a dedicated workspace,
+                        walk-in wardrobe, and premium bathroom fixtures.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Premium Dining Experience:</strong> Three
+                        gourmet meals daily with extended dining hours. Access
+                        to premium dining lounge, chef's special menu, and room
+                        service option. Special dietary requirements catered to
+                        with personalized attention.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Enhanced Housekeeping:</strong> Bi-weekly
+                        professional cleaning with premium cleaning products.
+                        Includes deep cleaning, premium linen service, and
+                        personalized room arrangement. Additional cleaning on
+                        request.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Priority Maintenance:</strong> Dedicated
+                        maintenance team with priority response (within 1 hour).
+                        Regular preventive maintenance and quarterly deep
+                        inspection of all facilities. 24/7 emergency support.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Premium WiFi:</strong> Ultra-fast 100 Mbps
+                        dedicated internet connection with priority bandwidth.
+                        Includes smart TV connectivity and streaming
+                        optimization. 24/7 technical support.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Advanced Security:</strong> Enhanced security
+                        system with 24/7 CCTV monitoring, biometric access, and
+                        dedicated security personnel. Regular security audits
+                        and emergency response drills.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Fitness Center Access:</strong> Exclusive access
+                        to premium fitness center with modern equipment,
+                        personal trainer sessions (2/month), and group fitness
+                        classes. Includes yoga studio and meditation room.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="service-gallery mb-4">
+                    <h4>Included Services:</h4>
+                    <div class="row g-4">
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Deluxe Room"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Deluxe Living Space</strong>
+                              Premium 180 sq. ft. room with smart home features,
+                              premium furniture, and elegant decor. Includes
+                              dedicated workspace and walk-in wardrobe.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Premium Dining"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Gourmet Dining</strong>
+                              Access to premium dining lounge with chef's
+                              special menu. Three gourmet meals daily with
+                              extended dining hours and room service option.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Fitness Center"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Premium Fitness</strong>
+                              State-of-the-art fitness center with modern
+                              equipment, personal trainer sessions, and group
+                              fitness classes. Includes yoga studio access.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Premium WiFi"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Ultra-Fast Internet</strong>
+                              100 Mbps dedicated connection with priority
+                              bandwidth. Smart TV connectivity and 24/7
+                              technical support included.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Enhanced Security"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Advanced Security</strong>
+                              Biometric access, 24/7 CCTV monitoring, and
+                              dedicated security team. Regular security audits
+                              and emergency response system.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Priority Maintenance"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Priority Support</strong>
+                              Dedicated maintenance team with 1-hour response
+                              time. Regular preventive maintenance and quarterly
+                              deep inspection of facilities.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="btn btn-primary btn-lg">
+                    Select Premium Package - ₹25,000/month
+                  </button>
+                </div>
+              </div>
+
+              <!-- Luxury Package -->
+              <div class="tab-pane fade" id="luxury" role="tabpanel">
+                <div class="package-content">
+                  <h2 class="mb-4">Luxury Living Package</h2>
+                  <p class="lead mb-4">
+                    Experience the pinnacle of luxury living with our most
+                    exclusive package. Designed for those who demand the finest
+                    in residential services, the Luxury Living Package offers
+                    unparalleled comfort, personalized attention, and access to
+                    premium amenities. Perfect for executives, entrepreneurs,
+                    and discerning individuals who value exceptional quality and
+                    exclusive services in their living environment.
+                  </p>
+
+                  <div class="features-list mb-4">
+                    <h4>Package Features:</h4>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Executive Suite:</strong> Spacious 250 sq. ft.
+                        luxury suite with premium furnishings, smart home
+                        automation, and panoramic views. Features include a
+                        separate living area, premium bathroom with rain shower,
+                        and exclusive balcony access.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>All-Day Dining Access:</strong> Unlimited access
+                        to premium dining facilities with à la carte menu
+                        options. Includes private dining room booking, chef's
+                        table experience, and personalized menu planning. Room
+                        service available 24/7.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Daily Housekeeping:</strong> Premium daily
+                        cleaning service with luxury cleaning products. Includes
+                        turndown service, premium linen changes, and
+                        personalized room arrangement. Additional cleaning on
+                        demand.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>24/7 Concierge Service:</strong> Dedicated
+                        concierge team available round-the-clock for all your
+                        needs. Services include travel arrangements, event
+                        planning, personal shopping, and exclusive access to
+                        premium services.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Ultra-Premium WiFi:</strong> Lightning-fast 500
+                        Mbps dedicated internet connection with priority
+                        bandwidth. Includes smart home integration, streaming
+                        optimization, and dedicated technical support team.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Advanced Security System:</strong>
+                        State-of-the-art security with facial recognition, 24/7
+                        CCTV monitoring, and dedicated security team. Includes
+                        private security escort service and secure parking.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Full Facility Access:</strong> Unlimited access
+                        to all premium facilities including private lounge,
+                        business center, spa, and premium fitness center.
+                        Includes priority booking for all amenities.
+                      </li>
+                      <li>
+                        <i class="fas fa-check text-success me-2"></i>
+                        <strong>Personal Assistant:</strong> Dedicated personal
+                        assistant available during working hours for all your
+                        needs. Services include scheduling, correspondence, and
+                        personal errands.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="service-gallery mb-4">
+                    <h4>Included Services:</h4>
+                    <div class="row g-4">
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Executive Suite"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Luxury Suite</strong>
+                              250 sq. ft. executive suite with smart home
+                              automation, premium furnishings, and panoramic
+                              views. Includes separate living area and exclusive
+                              balcony.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Fine Dining"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Exclusive Dining</strong>
+                              Access to premium dining facilities with à la
+                              carte menu, private dining room, and 24/7 room
+                              service. Personalized menu planning available.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Concierge Service"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Premium Concierge</strong>
+                              24/7 dedicated concierge service for all your
+                              needs. Includes travel arrangements, event
+                              planning, and personal shopping.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Premium Facilities"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Exclusive Facilities</strong>
+                              Unlimited access to private lounge, business
+                              center, spa, and premium fitness center. Priority
+                              booking for all amenities included.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Advanced Security"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Elite Security</strong>
+                              State-of-the-art security with facial recognition
+                              and 24/7 monitoring. Includes private security
+                              escort and secure parking.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-4">
+                        <div class="card">
+                          <img
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                            class="card-img-top"
+                            alt="Personal Assistant"
+                            loading="lazy"
+                          />
+                          <div class="card-body">
+                            <p class="card-text">
+                              <strong>Personal Assistant</strong>
+                              Dedicated assistant during working hours for
+                              scheduling, correspondence, and personal errands.
+                              Available for all your needs.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="btn btn-primary btn-lg">
+                    Select Luxury Package - ₹40,000/month
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      title="Back to Top"
+      class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center back-to-top-btn"
+    >
+      <i class="fas fa-arrow-up text-light"></i>
+    </button>
+
+    <!-- Add this script for back to top button functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Back to top button functionality
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            backToTopButton.style.opacity = "1";
+          } else {
+            backToTopButton.style.opacity = "0";
+          }
+        });
+
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+        // Prevent automatic scrolling on tab click
+        const tabLinks = document.querySelectorAll(
+          "#package-tabs .list-group-item"
+        );
+        tabLinks.forEach((tab) => {
+          tab.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+
+            // Remove active class from all tabs
+            tabLinks.forEach((t) => t.classList.remove("active"));
+            // Add active class to clicked tab
+            this.classList.add("active");
+
+            // Hide all tab panes
+            document.querySelectorAll(".tab-pane").forEach((pane) => {
+              pane.classList.remove("show", "active");
+            });
+
+            // Show target tab pane
+            const targetPane = document.querySelector(targetId);
+            targetPane.classList.add("show", "active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
