@@ -1,1582 +1,923 @@
-                  <!DOCTYPE html>
-                  <html lang="en">
-                    <head>
-                      <meta charset="UTF-8" />
-                      <meta
-                        name="viewport"
-                        content="width=device-width, initial-scale=1.0"
-                      />
-                      <title>Smart Living E-Society - Next-Gen Co-Living</title>
-                      <!-- Bootstrap CSS -->
-                      <link
-                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-                        rel="stylesheet"
-                      />
-                      <!-- Font Awesome -->
-                      <link
-                        rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-                      />
-                      <!-- Custom CSS -->
-                      <link rel="stylesheet" href="styles.css" />
-                    </head>
-                    <body>
-                      <!-- Navigation -->
-                      <header>
-                        <!-- Add the logo here -->
-                        <img
-                          src="./images/smart_living_logo.png"
-                          alt="Smart Living Logo"
-                          class="logo-img"
-                        />
-                        <div id="navbar"></div>
-                      </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Living E-Society - Next-Gen Co-Living</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <>
+    <!-- Navigation -->
+    <header>
+      <div id="navbar"></div>
+    </header>
 
-                      <!-- Hero Section -->
-                      <section id="home" class="hero-section pb-2">
-                        <div class="container h-100">
-                          <div class="row h-100 align-items-center">
-                            <div class="col-lg-6">
-                              <h2 class="display-4 text-white fw-bold mb-4">
-                                Welcome to Smart Living E-Society
-                              </h2>
-                              <p class="lead mb-4">
-                                Experience the future of co-living with our
-                                managed spaces designed for working
-                                professionals. Enjoy private living with premium
-                                amenities.
-                              </p>
-                              <div class="d-flex gap-3">
-                                <a
-                                  href="#contact"
-                                  class="btn btn-primary btn-lg"
-                                  >Book a Visit</a
-                                >
-                                <a
-                                  href="#about"
-                                  class="btn btn-outline-primary btn-lg"
-                                  >Learn More</a
-                                >
-                              </div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div class="hero-image">
-                                <img
-                                  src="./images/hero-bg.jpg"
-                                  alt="Modern Living Space"
-                                  class="img-fluid rounded-3 shadow-lg"
-                                  loading="eager"
-                                  width="900"
-                                  height="500"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Scroll Down Text -->
-                          <div class="scroll-down-text text-center mt-4">
-                            <h6 class="text-white mb-2">Scroll Down</h6>
-                            <div class="scroll-down-arrow">
-                              <i class="fas fa-chevron-down text-white"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pb-2">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="display-4 text-white fw-bold mb-4">
+              Welcome to Smart Living E-Society
+            </h2>
+            <p class="lead mb-4">
+              Experience the future of co-living with our managed spaces
+              designed for working professionals. Enjoy private living with
+              premium amenities.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#contact" class="btn btn-primary btn-lg">Book a Visit</a>
+              <a href="#about" class="btn btn-outline-primary btn-lg"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img
+                src="./images/hero-bg.jpg"
+                alt="Modern Living Space"
+                class="img-fluid rounded-3 shadow-lg"
+                loading="eager"
+                width="900"
+                height="500"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Scroll Down Text -->
+        <div class="scroll-down-text text-center mt-4">
+          <h6 class="text-white mb-2">Scroll Down</h6>
+          <div class="scroll-down-arrow">
+            <i class="fas fa-chevron-down text-white"></i>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                      <style>
-                        .scroll-down-text {
-                          animation: bounce 2s infinite;
-                        }
-                        @keyframes bounce {
-                          0%,
-                          20%,
-                          50%,
-                          80%,
-                          100% {
-                            transform: translateY(0);
-                          }
-                          40% {
-                            transform: translateY(-10px);
-                          }
-                          60% {
-                            transform: translateY(-5px);
-                          }
-                        }
-                      </style>
+    <style>
+      .scroll-down-text {
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
 
-                      <!-- About Us Section -->
-                      <section id="about" class="py-5 bg-light mt-0">
-                        <div class="container">
-                          <div class="row align-items-center">
-                            <div class="col-lg-6">
-                              <img
-                                src="./images/Home_page/about.jpg"
-                                alt="About Smart Living"
-                                class="img-fluid rounded-3 shadow-lg"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div class="col-lg-6 ps-lg-5">
-                              <div class="section-header mb-4">
-                                <small class="section-subtitle">ABOUT US</small>
-                                <h2 class="section-title">
-                                  About Smart Living E-Society
-                                </h2>
-                              </div>
-                              <p class="lead mb-4">
-                                We're revolutionizing the way working
-                                professionals live and work in urban spaces.
-                              </p>
-                              <p class="mb-4">
-                                Founded in 2024, Smart Living E-Society combines
-                                modern living with professional convenience. Our
-                                managed co-living spaces are designed to provide
-                                a perfect balance of privacy, community, and
-                                comfort.
-                              </p>
-                              <div class="row g-4 mb-4">
-                                <div class="col-6">
-                                  <div class="d-flex align-items-center">
-                                    <i
-                                      class="fas fa-check-circle text-primary me-2"
-                                    ></i>
-                                    <span>500+ Happy Residents</span>
-                                  </div>
-                                </div>
-                                <div class="col-6">
-                                  <div class="d-flex align-items-center">
-                                    <i
-                                      class="fas fa-check-circle text-primary me-2"
-                                    ></i>
-                                    <span>24/7 Support</span>
-                                  </div>
-                                </div>
-                                <div class="col-6">
-                                  <div class="d-flex align-items-center">
-                                    <i
-                                      class="fas fa-check-circle text-primary me-2"
-                                    ></i>
-                                    <span>Premium Amenities</span>
-                                  </div>
-                                </div>
-                                <div class="col-6">
-                                  <div class="d-flex align-items-center">
-                                    <i
-                                      class="fas fa-check-circle text-primary me-2"
-                                    ></i>
-                                    <span>Secure Environment</span>
-                                  </div>
-                                </div>
-                              </div>
-                              <a
-                                href="about.html"
-                                class="btn btn-primary btn-lg"
-                                >Learn More About Us</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light mt-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img
+              src="./images/Home_page/about.jpg"
+              alt="About Smart Living"
+              class="img-fluid rounded-3 shadow-lg"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6 ps-lg-5">
+            <div class="section-header mb-4">
+              <small class="section-subtitle">ABOUT US</small>
+              <h2 class="section-title">About Smart Living E-Society</h2>
+            </div>
+            <p class="lead mb-4">
+              We're revolutionizing the way working professionals live and work
+              in urban spaces.
+            </p>
+            <p class="mb-4">
+              Founded in 2024, Smart Living E-Society combines modern living
+              with professional convenience. Our managed co-living spaces are
+              designed to provide a perfect balance of privacy, community, and
+              comfort.
+            </p>
+            <div class="row g-4 mb-4">
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>500+ Happy Residents</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>Premium Amenities</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>Secure Environment</span>
+                </div>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-primary btn-lg"
+              >Learn More About Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-                      <!-- Statistics & Locations Section -->
-                      <section class="py-5 bg-dark mt-0">
-                        <div class="container">
-                          <!-- Locations -->
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle text-primary"
-                              >LOCATIONS</small
-                            >
-                            <h2 class="section-title text-white">
-                              Our Branches
-                            </h2>
-                          </div>
-                          <div class="row g-4 justify-content-center">
-                            <div class="col-md-6 col-lg-4">
-                              <div class="location-card p-4 text-center">
-                                <i
-                                  class="fas fa-map-marker-alt fa-3x text-primary mb-3"
-                                ></i>
-                                <h3 class="text-white">Vadodara</h3>
-                                <p class="location-number mb-0">
-                                  +91 98765 43210
-                                </p>
-                                <p class="text-muted">
-                                  Alkapuri, Vadodara, Gujarat
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <div class="location-card p-4 text-center">
-                                <i
-                                  class="fas fa-map-marker-alt fa-3x text-primary mb-3"
-                                ></i>
-                                <h3 class="text-white">Ahmedabad</h3>
-                                <p class="location-number mb-0">
-                                  +91 98765 43211
-                                </p>
-                                <p class="text-muted">
-                                  Satellite, Ahmedabad, Gujarat
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <div class="location-card p-4 text-center">
-                                <i
-                                  class="fas fa-map-marker-alt fa-3x text-primary mb-3"
-                                ></i>
-                                <h3 class="text-white">Surat</h3>
-                                <p class="location-number mb-0">
-                                  +91 98765 43212
-                                </p>
-                                <p class="text-muted">Vesu, Surat, Gujarat</p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <div class="location-card p-4 text-center">
-                                <i
-                                  class="fas fa-map-marker-alt fa-3x text-primary mb-3"
-                                ></i>
-                                <h3 class="text-white">Rajkot</h3>
-                                <p class="location-number mb-0">
-                                  +91 98765 43213
-                                </p>
-                                <p class="text-muted">
-                                  Race Course, Rajkot, Gujarat
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <div class="location-card p-4 text-center">
-                                <i
-                                  class="fas fa-map-marker-alt fa-3x text-primary mb-3"
-                                ></i>
-                                <h3 class="text-white">Gandhinagar</h3>
-                                <p class="location-number mb-0">
-                                  +91 98765 43214
-                                </p>
-                                <p class="text-muted">
-                                  Sector 21, Gandhinagar, Gujarat
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+    <!-- Statistics & Locations Section -->
+    <section class="py-5 bg-dark mt-0">
+      <div class="container">
+        <!-- Locations -->
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle text-primary">LOCATIONS</small>
+          <h2 class="section-title text-white">Our Branches</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="location-card p-4 text-center">
+              <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+              <h3 class="text-white">Vadodara</h3>
+              <p class="location-number mb-0">+91 98765 43210</p>
+              <p class="text-muted">Alkapuri, Vadodara, Gujarat</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="location-card p-4 text-center">
+              <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+              <h3 class="text-white">Ahmedabad</h3>
+              <p class="location-number mb-0">+91 98765 43211</p>
+              <p class="text-muted">Satellite, Ahmedabad, Gujarat</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="location-card p-4 text-center">
+              <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+              <h3 class="text-white">Surat</h3>
+              <p class="location-number mb-0">+91 98765 43212</p>
+              <p class="text-muted">Vesu, Surat, Gujarat</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="location-card p-4 text-center">
+              <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+              <h3 class="text-white">Rajkot</h3>
+              <p class="location-number mb-0">+91 98765 43213</p>
+              <p class="text-muted">Race Course, Rajkot, Gujarat</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="location-card p-4 text-center">
+              <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+              <h3 class="text-white">Gandhinagar</h3>
+              <p class="location-number mb-0">+91 98765 43214</p>
+              <p class="text-muted">Sector 21, Gandhinagar, Gujarat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                      <!-- Features Section -->
-                      <section id="features" class="py-5 mt-0">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle">FEATURES</small>
-                            <h2 class="section-title">
-                              Why Choose Smart Living?
-                            </h2>
-                          </div>
-                          <div class="row g-4">
-                            <div class="col-md-4">
-                              <div class="feature-card text-center p-4">
-                                <i
-                                  class="fas fa-home fa-3x text-primary mb-3"
-                                ></i>
-                                <h3>Private Living</h3>
-                                <p>
-                                  Enjoy your personal space with modern,
-                                  well-designed private flats.
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="feature-card text-center p-4">
-                                <i
-                                  class="fas fa-utensils fa-3x text-primary mb-3"
-                                ></i>
-                                <h3>Meal Services</h3>
-                                <p>
-                                  Delicious breakfast, lunch, and dinner
-                                  prepared by professional chefs.
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="feature-card text-center p-4">
-                                <i
-                                  class="fas fa-broom fa-3x text-primary mb-3"
-                                ></i>
-                                <h3>Housekeeping</h3>
-                                <p>
-                                  Regular cleaning and maintenance services
-                                  included.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+    <!-- Features Section -->
+    <section id="features" class="py-5 mt-0">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle">FEATURES</small>
+          <h2 class="section-title">Why Choose Smart Living?</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+              <i class="fas fa-home fa-3x text-primary mb-3"></i>
+              <h3>Private Living</h3>
+              <p>
+                Enjoy your personal space with modern, well-designed private
+                flats.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+              <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+              <h3>Meal Services</h3>
+              <p>
+                Delicious breakfast, lunch, and dinner prepared by professional
+                chefs.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+              <i class="fas fa-broom fa-3x text-primary mb-3"></i>
+              <h3>Housekeeping</h3>
+              <p>Regular cleaning and maintenance services included.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                      <!-- Amenities Section -->
-                      <section id="amenities" class="py-5 bg-dark mt-0">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle text-primary"
-                              >AMENITIES</small
-                            >
-                            <h2 class="section-title text-white">
-                              Premium Amenities
-                            </h2>
-                          </div>
-                          <div class="row g-4">
-                            <div class="col-md-6 col-lg-3">
-                              <div class="amenity-card">
-                                <img
-                                  src="./images/Home_page/lundry.jpg"
-                                  alt="Laundry Service"
-                                  class="img-fluid rounded mb-3"
-                                  loading="lazy"
-                                />
-                                <h4>Laundry Service</h4>
-                                <p>
-                                  Professional laundry and dry cleaning services
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                              <div class="amenity-card">
-                                <img
-                                  src="./images/Home_page/fitnes.jpg"
-                                  alt="Fitness Center"
-                                  class="img-fluid rounded mb-3"
-                                  loading="lazy"
-                                />
-                                <h4>Fitness Center</h4>
-                                <p>24/7 access to modern fitness equipment</p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                              <div class="amenity-card">
-                                <img
-                                  src="./images/Home_page/community.jpg"
-                                  alt="Community Space"
-                                  class="img-fluid rounded mb-3"
-                                  loading="lazy"
-                                />
-                                <h4>Community Space</h4>
-                                <p>Spacious common areas for socializing</p>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                              <div class="amenity-card">
-                                <img
-                                  src="./images/Home_page/security.jpg"
-                                  alt="Security"
-                                  class="img-fluid rounded mb-3"
-                                  loading="lazy"
-                                />
-                                <h4>24/7 Security</h4>
-                                <p>Round-the-clock security and surveillance</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-5 bg-dark mt-0">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle text-primary">AMENITIES</small>
+          <h2 class="section-title text-white">Premium Amenities</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="amenity-card">
+              <img
+                src="./images/Home_page/lundry.jpg"
+                alt="Laundry Service"
+                class="img-fluid rounded mb-3"
+                loading="lazy"
+              />
+              <h4>Laundry Service</h4>
+              <p>Professional laundry and dry cleaning services</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="amenity-card">
+              <img
+                src="./images/Home_page/fitnes.jpg"
+                alt="Fitness Center"
+                class="img-fluid rounded mb-3"
+                loading="lazy"
+              />
+              <h4>Fitness Center</h4>
+              <p>24/7 access to modern fitness equipment</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="amenity-card">
+              <img
+                src="./images/Home_page/community.jpg"
+                alt="Community Space"
+                class="img-fluid rounded mb-3"
+                loading="lazy"
+              />
+              <h4>Community Space</h4>
+              <p>Spacious common areas for socializing</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="amenity-card">
+              <img
+                src="./images/Home_page/security.jpg"
+                alt="Security"
+                class="img-fluid rounded mb-3"
+                loading="lazy"
+              />
+              <h4>24/7 Security</h4>
+              <p>Round-the-clock security and surveillance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                      <!-- Services Section -->
-                      <section id="services" class="py-5 bg-light mt-0">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle">SERVICES</small>
-                            <h2 class="section-title">Our Services</h2>
-                          </div>
-                          <div class="row g-4">
-                            <div class="col-md-6 col-lg-4">
-                              <div class="service-card p-4">
-                                <div class="service-icon mb-4">
-                                  <i class="fas fa-home fa-3x text-primary"></i>
-                                </div>
-                                <h3>Managed Accommodation</h3>
-                                <p>
-                                  Fully furnished private flats with modern
-                                  amenities and regular maintenance.
-                                </p>
-                                <ul class="list-unstyled">
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >Regular Cleaning
-                                  </li>
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >24/7 Maintenance
-                                  </li>
-                                </ul>
-                                <a
-                                  href="services.html#accommodation"
-                                  class="btn btn-outline-primary mt-3"
-                                  >Learn More</a
-                                >
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <div class="service-card p-4">
-                                <div class="service-icon mb-4">
-                                  <i
-                                    class="fas fa-utensils fa-3x text-primary"
-                                  ></i>
-                                </div>
-                                <h3>Dining Services</h3>
-                                <p>
-                                  Professional meal services with diverse menu
-                                  options and flexible timings.
-                                </p>
-                                <ul class="list-unstyled">
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >3 Meals Daily
-                                  </li>
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >Special Diets
-                                  </li>
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >Quality Ingredients
-                                  </li>
-                                </ul>
-                                <a
-                                  href="services.html#dining"
-                                  class="btn btn-outline-primary mt-3"
-                                  >Learn More</a
-                                >
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <div class="service-card p-4">
-                                <div class="service-icon mb-4">
-                                  <i
-                                    class="fas fa-concierge-bell fa-3x text-primary"
-                                  ></i>
-                                </div>
-                                <h3>Additional Services</h3>
-                                <p>
-                                  Premium services to make your stay comfortable
-                                  and convenient.
-                                </p>
-                                <ul class="list-unstyled">
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >Laundry Service
-                                  </li>
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >Housekeeping
-                                  </li>
-                                  <li>
-                                    <i
-                                      class="fas fa-check text-primary me-2"
-                                    ></i
-                                    >Security
-                                  </li>
-                                </ul>
-                                <a
-                                  href="services.html#additional"
-                                  class="btn btn-outline-primary mt-3"
-                                  >Learn More</a
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light mt-0">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle">SERVICES</small>
+          <h2 class="section-title">Our Services</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+              <div class="service-icon mb-4">
+                <i class="fas fa-home fa-3x text-primary"></i>
+              </div>
+              <h3>Managed Accommodation</h3>
+              <p>
+                Fully furnished private flats with modern amenities and regular
+                maintenance.
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>Regular Cleaning
+                </li>
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>24/7 Maintenance
+                </li>
+              </ul>
+              <a
+                href="services.html#accommodation"
+                class="btn btn-outline-primary mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+              <div class="service-icon mb-4">
+                <i class="fas fa-utensils fa-3x text-primary"></i>
+              </div>
+              <h3>Dining Services</h3>
+              <p>
+                Professional meal services with diverse menu options and
+                flexible timings.
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>3 Meals Daily
+                </li>
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>Special Diets
+                </li>
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>Quality
+                  Ingredients
+                </li>
+              </ul>
+              <a
+                href="services.html#dining"
+                class="btn btn-outline-primary mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card p-4">
+              <div class="service-icon mb-4">
+                <i class="fas fa-concierge-bell fa-3x text-primary"></i>
+              </div>
+              <h3>Additional Services</h3>
+              <p>
+                Premium services to make your stay comfortable and convenient.
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>Laundry Service
+                </li>
+                <li>
+                  <i class="fas fa-check text-primary me-2"></i>Housekeeping
+                </li>
+                <li><i class="fas fa-check text-primary me-2"></i>Security</li>
+              </ul>
+              <a
+                href="services.html#additional"
+                class="btn btn-outline-primary mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                      <!-- Gallery Section -->
-                      <section id="gallery" class="py-5 bg-dark mt-0">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle text-primary"
-                              >GALLERY</small
-                            >
-                            <h2 class="section-title text-white">
-                              Our Living Spaces
-                            </h2>
-                          </div>
-                          <div class="row g-4">
-                            <div class="col-md-4">
-                              <div class="gallery-item">
-                                <img
-                                  src="./images/Home_page/living.jpg"
-                                  alt="Living Room"
-                                  class="img-fluid rounded-3 shadow-sm"
-                                  loading="lazy"
-                                />
-                                <div class="gallery-overlay">
-                                  <h5>Modern Living Room</h5>
-                                  <p>Spacious and comfortable</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="gallery-item">
-                                <img
-                                  src="./images/Home_page/cozy_besdroom.jpg"
-                                  alt="Bedroom"
-                                  class="img-fluid rounded-3 shadow-sm"
-                                  loading="lazy"
-                                />
-                                <div class="gallery-overlay">
-                                  <h5>Cozy Bedroom</h5>
-                                  <p>Perfect for relaxation</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="gallery-item">
-                                <img
-                                  src="./images/Home_page/kitchen.jpg"
-                                  alt="Kitchen"
-                                  class="img-fluid rounded-3 shadow-sm"
-                                  loading="lazy"
-                                />
-                                <div class="gallery-overlay">
-                                  <h5>Modern Kitchen</h5>
-                                  <p>Fully equipped</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="gallery-item">
-                                <img
-                                  src="./images/Home_page/fitnes.jpg"
-                                  alt="Gym"
-                                  class="img-fluid rounded-3 shadow-sm"
-                                  loading="lazy"
-                                />
-                                <div class="gallery-overlay">
-                                  <h5>Fitness Center</h5>
-                                  <p>24/7 access</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="gallery-item">
-                                <img
-                                  src="./images/Home_page/common_area.jpg"
-                                  alt="Common Area"
-                                  class="img-fluid rounded-3 shadow-sm"
-                                  loading="lazy"
-                                />
-                                <div class="gallery-overlay">
-                                  <h5>Common Area</h5>
-                                  <p>Perfect for socializing</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="gallery-item">
-                                <img
-                                  src="./images/Home_page/lundry.jpg"
-                                  alt="Laundry"
-                                  class="img-fluid rounded-3 shadow-sm"
-                                  loading="lazy"
-                                />
-                                <div class="gallery-overlay">
-                                  <h5>Laundry Service</h5>
-                                  <p>Professional care</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                      <!-- Pricing Section -->
-                      <section id="pricing" class="py-5 bg-light mt-0">
-                        <div class="container px-3 px-md-5">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle text-primary fw-bold"
-                              >PRICING</small
-                            >
-                            <h2
-                              class="section-title text-dark display-5 fw-bold mt-2"
-                            >
-                              Choose Your Plan
-                            </h2>
-                            <p class="text-muted mt-3">
-                              Select the perfect plan that suits your lifestyle
-                            </p>
-                          </div>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-dark mt-0">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle text-primary">GALLERY</small>
+          <h2 class="section-title text-white">Our Living Spaces</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img
+                src="./images/Home_page/living.jpg"
+                alt="Living Room"
+                class="img-fluid rounded-3 shadow-sm"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h5>Modern Living Room</h5>
+                <p>Spacious and comfortable</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img
+                src="./images/Home_page/cozy_besdroom.jpg"
+                alt="Bedroom"
+                class="img-fluid rounded-3 shadow-sm"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h5>Cozy Bedroom</h5>
+                <p>Perfect for relaxation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img
+                src="./images/Home_page/kitchen.jpg"
+                alt="Kitchen"
+                class="img-fluid rounded-3 shadow-sm"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h5>Modern Kitchen</h5>
+                <p>Fully equipped</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img
+                src="./images/Home_page/fitnes.jpg"
+                alt="Gym"
+                class="img-fluid rounded-3 shadow-sm"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h5>Fitness Center</h5>
+                <p>24/7 access</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img
+                src="./images/Home_page/common_area.jpg"
+                alt="Common Area"
+                class="img-fluid rounded-3 shadow-sm"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h5>Common Area</h5>
+                <p>Perfect for socializing</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img
+                src="./images/Home_page/lundry.jpg"
+                alt="Laundry"
+                class="img-fluid rounded-3 shadow-sm"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <h5>Laundry Service</h5>
+                <p>Professional care</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light mt-0">
+      <div class="container px-3 px-md-5">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle text-primary fw-bold">PRICING</small>
+          <h2 class="section-title text-dark display-5 fw-bold mt-2">
+            Choose Your Plan
+          </h2>
+          <p class="text-muted mt-3">
+            Select the perfect plan that suits your lifestyle
+          </p>
+        </div>
 
-                          <div class="row g-4 justify-content-center">
-                            <!-- Basic Plan -->
-                            <div class="col-md-6 col-lg-4">
-                              <div
-                                class="card h-100 border-0 shadow-sm pricing-card"
-                              >
-                                <div class="card-body text-center p-4 p-lg-5">
-                                  <div class="pricing-badge mb-4">
-                                    <span
-                                      class="badge bg-light text-primary px-3 py-2 rounded-pill"
-                                      >Basic</span
-                                    >
-                                  </div>
-                                  <h5 class="card-title fw-bold display-6 mb-3">
-                                    Basic
-                                  </h5>
-                                  <h6 class="text-primary mb-3">
-                                    <span class="display-5 fw-bold"
-                                      >₹15,000</span
-                                    >
-                                    <small class="text-muted fw-normal"
-                                      >/month</small
-                                    >
-                                  </h6>
-                                  <p class="text-muted mb-4">
-                                    Perfect for individuals
-                                  </p>
-                                  <ul
-                                    class="list-unstyled text-start mt-4 mb-4 pricing-features"
-                                  >
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>120 sq. ft. Private Room</strong
-                                      ><br />
-                                      <small class="text-muted ms-4"
-                                        >Study desk, wardrobe, comfortable
-                                        bed</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>2 Meals Daily</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Breakfast & Dinner (7:00-9:30
-                                        PM)</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>Weekly Housekeeping</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Professional cleaning every
-                                        Saturday</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>50 Mbps WiFi</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Dedicated bandwidth per room</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>24/7 Security</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >CCTV surveillance & secure
-                                        access</small
-                                      >
-                                    </li>
-                                  </ul>
-                                  <a
-                                    href="#"
-                                    class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
-                                    >Get Started</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
+        <div class="row g-4 justify-content-center">
+          <!-- Basic Plan -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm pricing-card">
+              <div class="card-body text-center p-4 p-lg-5">
+                <div class="pricing-badge mb-4">
+                  <span
+                    class="badge bg-light text-primary px-3 py-2 rounded-pill"
+                    >Basic</span
+                  >
+                </div>
+                <h5 class="card-title fw-bold display-6 mb-3">Basic</h5>
+                <h6 class="text-primary mb-3">
+                  <span class="display-5 fw-bold">₹15,000</span>
+                  <small class="text-muted fw-normal">/month</small>
+                </h6>
+                <p class="text-muted mb-4">Perfect for individuals</p>
+                <ul class="list-unstyled text-start mt-4 mb-4 pricing-features">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>120 sq. ft. Private Room</strong><br />
+                    <small class="text-muted ms-4"
+                      >Study desk, wardrobe, comfortable bed</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>2 Meals Daily</strong><br />
+                    <small class="text-muted ms-4"
+                      >Breakfast & Dinner (7:00-9:30 PM)</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>Weekly Housekeeping</strong><br />
+                    <small class="text-muted ms-4"
+                      >Professional cleaning every Saturday</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>50 Mbps WiFi</strong><br />
+                    <small class="text-muted ms-4"
+                      >Dedicated bandwidth per room</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>24/7 Security</strong><br />
+                    <small class="text-muted ms-4"
+                      >CCTV surveillance & secure access</small
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
 
-                            <!-- Professional Plan -->
-                            <div class="col-md-6 col-lg-4">
-                              <div
-                                class="card h-100 border-0 shadow-lg pricing-card popular bg-dark text-white"
-                              >
-                                <div class="card-body text-center p-4 p-lg-5">
-                                  <div class="pricing-badge mb-4">
-                                    <span
-                                      class="badge bg-primary text-white px-3 py-2 rounded-pill"
-                                      >Professional</span
-                                    >
-                                  </div>
-                                  <h5
-                                    class="card-title fw-bold display-6 mb-3 text-white"
-                                  >
-                                    Professional
-                                  </h5>
-                                  <h6 class="text-white mb-3">
-                                    <span class="display-5 fw-bold"
-                                      >₹25,000</span
-                                    >
-                                    <small class="text-light fw-normal"
-                                      >/month</small
-                                    >
-                                  </h6>
-                                  <p class="text-light mb-4">
-                                    Best for working professionals
-                                  </p>
-                                  <ul
-                                    class="list-unstyled text-start mt-4 mb-4 pricing-features"
-                                  >
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>180 sq. ft. Deluxe Room</strong
-                                      ><br />
-                                      <small class="text-light ms-4"
-                                        >Smart home features & walk-in
-                                        wardrobe</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>3 Gourmet Meals Daily</strong
-                                      ><br />
-                                      <small class="text-light ms-4"
-                                        >Premium dining lounge access</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>Bi-weekly Housekeeping</strong
-                                      ><br />
-                                      <small class="text-light ms-4"
-                                        >Premium cleaning products
-                                        included</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>100 Mbps WiFi</strong><br />
-                                      <small class="text-light ms-4"
-                                        >Priority bandwidth & smart TV</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>Premium Fitness Access</strong
-                                      ><br />
-                                      <small class="text-light ms-4"
-                                        >Personal trainer sessions
-                                        included</small
-                                      >
-                                    </li>
-                                  </ul>
-                                  <a
-                                    href="#"
-                                    class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
-                                    >Get Started</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
+          <!-- Professional Plan -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 border-0 shadow-lg pricing-card popular bg-dark text-white"
+            >
+              <div class="card-body text-center p-4 p-lg-5">
+                <div class="pricing-badge mb-4">
+                  <span
+                    class="badge bg-primary text-white px-3 py-2 rounded-pill"
+                    >Professional</span
+                  >
+                </div>
+                <h5 class="card-title fw-bold display-6 mb-3 text-white">
+                  Professional
+                </h5>
+                <h6 class="text-white mb-3">
+                  <span class="display-5 fw-bold">₹25,000</span>
+                  <small class="text-light fw-normal">/month</small>
+                </h6>
+                <p class="text-light mb-4">Best for working professionals</p>
+                <ul class="list-unstyled text-start mt-4 mb-4 pricing-features">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>180 sq. ft. Deluxe Room</strong><br />
+                    <small class="text-light ms-4"
+                      >Smart home features & walk-in wardrobe</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>3 Gourmet Meals Daily</strong><br />
+                    <small class="text-light ms-4"
+                      >Premium dining lounge access</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>Bi-weekly Housekeeping</strong><br />
+                    <small class="text-light ms-4"
+                      >Premium cleaning products included</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>100 Mbps WiFi</strong><br />
+                    <small class="text-light ms-4"
+                      >Priority bandwidth & smart TV</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>Premium Fitness Access</strong><br />
+                    <small class="text-light ms-4"
+                      >Personal trainer sessions included</small
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
 
-                            <!-- Executive Plan -->
-                            <div class="col-md-6 col-lg-4">
-                              <div
-                                class="card h-100 border-0 shadow-sm pricing-card executive bg-white"
-                              >
-                                <div class="card-body text-center p-4 p-lg-5">
-                                  <div class="pricing-badge mb-4">
-                                    <span
-                                      class="badge bg-primary text-white px-3 py-2 rounded-pill"
-                                      >Executive</span
-                                    >
-                                  </div>
-                                  <h5
-                                    class="card-title fw-bold display-6 mb-3 text-dark"
-                                  >
-                                    Executive
-                                  </h5>
-                                  <h6 class="text-primary mb-3">
-                                    <span class="display-5 fw-bold"
-                                      >₹35,000</span
-                                    >
-                                    <small class="text-muted fw-normal"
-                                      >/month</small
-                                    >
-                                  </h6>
-                                  <p class="text-muted mb-4">
-                                    For executives & entrepreneurs
-                                  </p>
-                                  <ul
-                                    class="list-unstyled text-start mt-4 mb-4 pricing-features"
-                                  >
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>Luxury Suite</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Spacious 250 sq. ft. suite</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>All-Day Dining Access</strong
-                                      ><br />
-                                      <small class="text-muted ms-4"
-                                        >24/7 room service available</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>Daily Housekeeping</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Premium turndown service</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>500 Mbps WiFi</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Smart home integration</small
-                                      >
-                                    </li>
-                                    <li class="mb-3">
-                                      <i
-                                        class="fas fa-check-circle text-primary me-2"
-                                      ></i>
-                                      <strong>Personal Assistant</strong><br />
-                                      <small class="text-muted ms-4"
-                                        >Dedicated support during work
-                                        hours</small
-                                      >
-                                    </li>
-                                  </ul>
-                                  <a
-                                    href="#"
-                                    class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
-                                    >Get Started</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+          <!-- Executive Plan -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 border-0 shadow-sm pricing-card executive bg-white"
+            >
+              <div class="card-body text-center p-4 p-lg-5">
+                <div class="pricing-badge mb-4">
+                  <span
+                    class="badge bg-primary text-white px-3 py-2 rounded-pill"
+                    >Executive</span
+                  >
+                </div>
+                <h5 class="card-title fw-bold display-6 mb-3 text-dark">
+                  Executive
+                </h5>
+                <h6 class="text-primary mb-3">
+                  <span class="display-5 fw-bold">₹35,000</span>
+                  <small class="text-muted fw-normal">/month</small>
+                </h6>
+                <p class="text-muted mb-4">For executives & entrepreneurs</p>
+                <ul class="list-unstyled text-start mt-4 mb-4 pricing-features">
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>Luxury Suite</strong><br />
+                    <small class="text-muted ms-4"
+                      >Spacious 250 sq. ft. suite</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>All-Day Dining Access</strong><br />
+                    <small class="text-muted ms-4"
+                      >24/7 room service available</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>Daily Housekeeping</strong><br />
+                    <small class="text-muted ms-4"
+                      >Premium turndown service</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>500 Mbps WiFi</strong><br />
+                    <small class="text-muted ms-4"
+                      >Smart home integration</small
+                    >
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check-circle text-primary me-2"></i>
+                    <strong>Personal Assistant</strong><br />
+                    <small class="text-muted ms-4"
+                      >Dedicated support during work hours</small
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn btn-primary w-100 py-3 rounded-pill fw-bold"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                        <style>
-                          .pricing-card {
-                            transition: transform 0.3s ease,
-                              box-shadow 0.3s ease;
-                            border-radius: 1rem;
-                            overflow: hidden;
-                          }
+      <style>
+        .pricing-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border-radius: 1rem;
+          overflow: hidden;
+        }
 
-                          .pricing-card:hover {
-                            transform: translateY(-10px);
-                            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-                          }
+        .pricing-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+        }
 
-                          .pricing-card.popular {
-                            transform: scale(1.05);
-                            z-index: 1;
-                            background: linear-gradient(
-                              145deg,
-                              #1a1a1a,
-                              #2d2d2d
-                            );
-                          }
+        .pricing-card.popular {
+          transform: scale(1.05);
+          z-index: 1;
+          background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+        }
 
-                          .pricing-card.executive {
-                            background: linear-gradient(
-                              145deg,
-                              #ffffff,
-                              #f8f9fa
-                            );
-                            border: 1px solid rgba(0, 0, 0, 0.1);
-                          }
+        .pricing-card.executive {
+          background: linear-gradient(145deg, #ffffff, #f8f9fa);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
 
-                          .pricing-card.popular:hover {
-                            transform: scale(1.05) translateY(-10px);
-                            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
-                          }
+        .pricing-card.popular:hover {
+          transform: scale(1.05) translateY(-10px);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
+        }
 
-                          .pricing-card.executive:hover {
-                            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
-                            border-color: rgba(13, 110, 253, 0.2);
-                          }
+        .pricing-card.executive:hover {
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+          border-color: rgba(13, 110, 253, 0.2);
+        }
 
-                          .pricing-card.executive .btn-primary:hover {
-                            background-color: #0a58ca;
-                            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
-                          }
+        .pricing-card.executive .btn-primary:hover {
+          background-color: #0a58ca;
+          box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+        }
 
-                          .popular-badge {
-                            position: absolute;
-                            top: 1rem;
-                            right: 1rem;
-                            z-index: 2;
-                          }
+        .popular-badge {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          z-index: 2;
+        }
 
-                          .pricing-features li {
-                            transition: transform 0.2s ease;
-                          }
+        .pricing-features li {
+          transition: transform 0.2s ease;
+        }
 
-                          .pricing-features li:hover {
-                            transform: translateX(5px);
-                          }
+        .pricing-features li:hover {
+          transform: translateX(5px);
+        }
 
-                          .pricing-badge .badge {
-                            font-size: 0.9rem;
-                            font-weight: 500;
-                          }
+        .pricing-badge .badge {
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
 
-                          .btn-primary {
-                            transition: all 0.3s ease;
-                          }
+        .btn-primary {
+          transition: all 0.3s ease;
+        }
 
-                          .btn-primary:hover {
-                            transform: translateY(-2px);
-                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                          }
+        .btn-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-                          .btn-outline-light:hover {
-                            transform: translateY(-2px);
-                            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-                          }
+        .btn-outline-light:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
 
-                          .popular-ribbon {
-                            position: absolute;
-                            top: 20px;
-                            right: -40px;
-                            width: 200px;
-                            height: 30px;
-                            background-color: var(--bs-primary);
-                            transform: rotate(45deg);
-                            transform-origin: center;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 0.9rem;
-                            font-weight: bold;
-                            color: #fff;
-                            z-index: 10;
-                            overflow: hidden;
-                            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                          }
+        .popular-ribbon {
+          position: absolute;
+          top: 20px;
+          right: -40px;
+          width: 200px;
+          height: 30px;
+          background-color: var(--bs-primary);
+          transform: rotate(45deg);
+          transform-origin: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.9rem;
+          font-weight: bold;
+          color: #fff;
+          z-index: 10;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-                          .popular-ribbon span {
-                          }
+        .popular-ribbon span {
+        }
 
-                          .popular-ribbon::before {
-                            content: '';
-                            position: absolute;
-                            top: 100%;
-                            left: 0;
-                            border-style: solid;
-                            border-width: 0 0 10px 10px;
-                            border-color: transparent transparent transparent #0a58ca;
-                            z-index: 1;
-                          }
+        .popular-ribbon::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          border-style: solid;
+          border-width: 0 0 10px 10px;
+          border-color: transparent transparent transparent #0a58ca;
+          z-index: 1;
+        }
 
-                          .popular-ribbon::after {
-                            content: '';
-                            position: absolute;
-                            top: 100%;
-                            right: 0;
-                            border-style: solid;
-                            border-width: 0 10px 10px 0;
-                            border-color: transparent #0a58ca transparent transparent;
-                            z-index: 1;
-                          }
+        .popular-ribbon::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          right: 0;
+          border-style: solid;
+          border-width: 0 10px 10px 0;
+          border-color: transparent #0a58ca transparent transparent;
+          z-index: 1;
+        }
 
-                          .pricing-card.popular {
-                            padding-top: 0;
-                            overflow: hidden;
-                          }
+        .pricing-card.popular {
+          padding-top: 0;
+          overflow: hidden;
+        }
 
-                          .pricing-card.popular .card-body {
-                            position: relative;
-                            z-index: 1;
-                          }
-                        </style>
-                      </section>
+        .pricing-card.popular .card-body {
+          position: relative;
+          z-index: 1;
+        }
+      </style>
+    </section>
 
-                      <!-- Testimonials Section -->
-                      <section id="testimonials" class="py-5 mt-0 bg-dark">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle text-primary"
-                              >TESTIMONIALS</small
-                            >
-                            <h2 class="section-title text-white">
-                              What Our Residents Say
-                            </h2>
-                          </div>
-                          <div class="row g-4">
-                            <div class="col-md-4">
-                              <div class="testimonial-card p-4">
-                                <div class="testimonial-rating mb-3">
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                </div>
-                                <p class="testimonial-text mb-4">
-                                  "Smart Living has transformed my work-life
-                                  balance. The amenities and services are
-                                  top-notch, and the community is amazing!"
-                                </p>
-                                <div
-                                  class="testimonial-author d-flex align-items-center"
-                                >
-                                  <img
-                                    src="./images/client/client1.png"
-                                    alt="Sarah Johnson"
-                                    class="rounded-circle me-3"
-                                    width="50"
-                                    height="50"
-                                    loading="lazy"
-                                  />
-                                  <div>
-                                    <h5 class="mb-0">Sarah Johnson</h5>
-                                    <small class="text-muted"
-                                      >Software Engineer</small
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="testimonial-card p-4">
-                                <div class="testimonial-rating mb-3">
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                </div>
-                                <p class="testimonial-text mb-4">
-                                  "The convenience of having meals and
-                                  housekeeping taken care of has given me more
-                                  time to focus on my career. Highly
-                                  recommended!"
-                                </p>
-                                <div
-                                  class="testimonial-author d-flex align-items-center"
-                                >
-                                  <img
-                                    src="./images/client/client2.png"
-                                    alt="Michael Chen"
-                                    class="rounded-circle me-3"
-                                    width="50"
-                                    height="50"
-                                    loading="lazy"
-                                  />
-                                  <div>
-                                    <h5 class="mb-0">Michael Chen</h5>
-                                    <small class="text-muted"
-                                      >Marketing Manager</small
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="testimonial-card p-4">
-                                <div class="testimonial-rating mb-3">
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i class="fas fa-star text-warning"></i>
-                                  <i
-                                    class="fas fa-star-half-alt text-warning"
-                                  ></i>
-                                </div>
-                                <p class="testimonial-text mb-4">
-                                  "The community here is fantastic. I've made
-                                  great friends and the staff is always helpful.
-                                  It's truly a home away from home."
-                                </p>
-                                <div
-                                  class="testimonial-author d-flex align-items-center"
-                                >
-                                  <img
-                                    src="./images/client/client3.png"
-                                    alt="Priya Sharma"
-                                    class="rounded-circle me-3"
-                                    width="50"
-                                    height="50"
-                                    loading="lazy"
-                                  />
-                                  <div>
-                                    <h5 class="mb-0">Priya Sharma</h5>
-                                    <small class="text-muted"
-                                      >Business Analyst</small
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                      <!-- FAQ Section -->
-                      <section id="faq" class="py-5 mt-0 bg-light">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle">FAQ</small>
-                            <h2 class="section-title">
-                              Frequently Asked Questions
-                            </h2>
-                          </div>
-                          <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                              <div class="accordion" id="faqAccordion">
-                                <div class="accordion-item">
-                                  <h3 class="accordion-header">
-                                    <button
-                                      class="accordion-button"
-                                      type="button"
-                                      data-bs-toggle="collapse"
-                                      data-bs-target="#faq1"
-                                    >
-                                      What is included in the rent?
-                                    </button>
-                                  </h3>
-                                  <div
-                                    id="faq1"
-                                    class="accordion-collapse collapse show"
-                                    data-bs-parent="#faqAccordion"
-                                  >
-                                    <div class="accordion-body">
-                                      The rent includes fully furnished
-                                      accommodation, all utilities, high-speed
-                                      internet, housekeeping, and access to all
-                                      amenities. Additional services like
-                                      laundry and meals are available at extra
-                                      cost.
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h3 class="accordion-header">
-                                    <button
-                                      class="accordion-button collapsed"
-                                      type="button"
-                                      data-bs-toggle="collapse"
-                                      data-bs-target="#faq2"
-                                    >
-                                      How long is the minimum stay?
-                                    </button>
-                                  </h3>
-                                  <div
-                                    id="faq2"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion"
-                                  >
-                                    <div class="accordion-body">
-                                      The minimum stay period is 3 months. We
-                                      offer flexible lease terms of 3, 6, and 12
-                                      months with different pricing options.
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h3 class="accordion-header">
-                                    <button
-                                      class="accordion-button collapsed"
-                                      type="button"
-                                      data-bs-toggle="collapse"
-                                      data-bs-target="#faq3"
-                                    >
-                                      Is there a security deposit?
-                                    </button>
-                                  </h3>
-                                  <div
-                                    id="faq3"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion"
-                                  >
-                                    <div class="accordion-body">
-                                      Yes, we require a security deposit
-                                      equivalent to one month's rent. This is
-                                      refundable at the end of your stay,
-                                      subject to property condition.
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h3 class="accordion-header">
-                                    <button
-                                      class="accordion-button collapsed"
-                                      type="button"
-                                      data-bs-toggle="collapse"
-                                      data-bs-target="#faq4"
-                                    >
-                                      Can I have guests over?
-                                    </button>
-                                  </h3>
-                                  <div
-                                    id="faq4"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#faqAccordion"
-                                  >
-                                    <div class="accordion-body">
-                                      Yes, you can have guests over. We have a
-                                      guest policy that allows overnight stays
-                                      for up to 3 nights. Please inform the
-                                      management in advance.
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                      <!-- Blog Section -->
-                      <section id="blog" class="py-5 mt-0 bg-dark">
-                        <div class="container">
-                          <div class="section-header text-center mb-5">
-                            <small class="section-subtitle text-primary"
-                              >BLOG</small
-                            >
-                            <h2 class="section-title text-white">
-                              Latest Updates
-                            </h2>
-                          </div>
-                          <div class="row g-4">
-                            <div class="col-md-4">
-                              <div class="blog-card">
-                                <img
-                                  src="./images/Home_page/kitchen-hero.jpg"
-                                  alt="New Property"
-                                  class="img-fluid rounded-top"
-                                  loading="lazy"
-                                />
-                                <div class="blog-content p-4">
-                                  <div class="blog-meta mb-2">
-                                    <span class="text-muted"
-                                      ><i class="far fa-calendar-alt me-2"></i
-                                      >March 15, 2024</span
-                                    >
-                                  </div>
-                                  <h4>New Property Launch in Vadodara</h4>
-                                  <p>
-                                    We're excited to announce our newest
-                                    property in the heart of Vadodara, featuring
-                                    modern amenities and premium services.
-                                  </p>
-                                  <a href="#" class="btn btn-link p-0"
-                                    >Read More
-                                    <i class="fas fa-arrow-right ms-2"></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="blog-card">
-                                <img
-                                  src="./images/Home_page/common_area.jpg"
-                                  alt="Community Event"
-                                  class="img-fluid rounded-top"
-                                  loading="lazy"
-                                />
-                                <div class="blog-content p-4">
-                                  <div class="blog-meta mb-2">
-                                    <span class="text-muted"
-                                      ><i class="far fa-calendar-alt me-2"></i
-                                      >March 10, 2024</span
-                                    >
-                                  </div>
-                                  <h4>Community Meet & Greet</h4>
-                                  <p>
-                                    Join us for our monthly community event
-                                    where residents can network and build
-                                    lasting connections.
-                                  </p>
-                                  <a href="#" class="btn btn-link p-0"
-                                    >Read More
-                                    <i class="fas fa-arrow-right ms-2"></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="blog-card">
-                                <img
-                                  src="./images/Home_page/fitnes.jpg"
-                                  alt="New Amenity"
-                                  class="img-fluid rounded-top"
-                                  loading="lazy"
-                                />
-                                <div class="blog-content p-4">
-                                  <div class="blog-meta mb-2">
-                                    <span class="text-muted"
-                                      ><i class="far fa-calendar-alt me-2"></i
-                                      >March 5, 2024</span
-                                    >
-                                  </div>
-                                  <h4>New Fitness Center Opening</h4>
-                                  <p>
-                                    Our state-of-the-art fitness center is now
-                                    open 24/7 with new equipment and personal
-                                    training services.
-                                  </p>
-                                  <a href="#" class="btn btn-link p-0"
-                                    >Read More
-                                    <i class="fas fa-arrow-right ms-2"></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                      <!-- Contact Section -->
-                      <section id="contact" class="mt-0 py-5">
-                        <div class="container">
-                          <h2 class="text-center mb-5">Get in Touch</h2>
-                          <div class="row g-4">
-                            <div class="col-lg-6">
-                              <div class="contact-info-wrapper">
-                                <div
-                                  class="contact-info p-4 bg-light rounded-3 mb-4"
-                                >
-                                  <h3 class="mb-4">Contact Information</h3>
-                                  <div class="d-flex mb-3">
-                                    <i
-                                      class="fas fa-map-marker-alt text-primary me-3 fa-lg"
-                                    ></i>
-                                    <div>
-                                      <h5 class="mb-1">Our Location</h5>
-                                      <p class="mb-0">
-                                        123 Smart Living Avenue, Alkapuri,
-                                        Vadodara, Gujarat 390007
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex mb-3">
-                                    <i
-                                      class="fas fa-phone text-primary me-3 fa-lg"
-                                    ></i>
-                                    <div>
-                                      <h5 class="mb-1">Phone Number</h5>
-                                      <p class="mb-0">+91 98765 43210</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex mb-3">
-                                    <i
-                                      class="fas fa-envelope text-primary me-3 fa-lg"
-                                    ></i>
-                                    <div>
-                                      <h5 class="mb-1">Email Address</h5>
-                                      <p class="mb-0">info@smartliving.com</p>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex">
-                                    <i
-                                      class="fas fa-clock text-primary me-3 fa-lg"
-                                    ></i>
-                                    <div>
-                                      <h5 class="mb-1">Working Hours</h5>
-                                      <p class="mb-0">
-                                        Monday - Sunday: 9:00 AM - 8:00 PM
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="map-container rounded-3 overflow-hidden shadow-sm"
-                                >
-                                  <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.676483456456!2d73.1814!3d22.3072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzI1LjkiTiA3M8KwMTAnNTMuMSJF!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
-                                    width="100%"
-                                    height="300"
-                                    style="border: 0"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                  >
-                                  </iframe>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div
-                                class="contact-form-wrapper p-4 bg-white rounded-3 shadow-sm"
-                              >
-                                <form id="contactForm">
-                                  <div class="row g-3">
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="name" class="form-label"
-                                          >Your Name</label
-                                        >
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          id="name"
-                                          required
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="email" class="form-label"
-                                          >Your Email</label
-                                        >
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                          id="email"
-                                          required
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="phone" class="form-label"
-                                          >Phone Number</label
-                                        >
-                                        <input
-                                          type="tel"
-                                          class="form-control"
-                                          id="phone"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="subject" class="form-label"
-                                          >Subject</label
-                                        >
-                                        <select
-                                          class="form-select"
-                                          id="subject"
-                                          required
-                                        >
-                                          <option value="">
-                                            Select a subject
-                                          </option>
-                                          <option value="booking">
-                                            Book a Visit
-                                          </option>
-                                          <option value="pricing">
-                                            Pricing Inquiry
-                                          </option>
-                                          <option value="services">
-                                            Services Information
-                                          </option>
-                                          <option value="other">Other</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-12">
-                                      <div class="form-group">
-                                        <label for="message" class="form-label"
-                                          >Your Message</label
-                                        >
-                                        <textarea
-                                          class="form-control"
-                                          id="message"
-                                          rows="4"
-                                          required
-                                        ></textarea>
-                                      </div>
-                                    </div>
-                                    <div class="col-12">
-                                      <button
-                                        type="submit"
-                                        class="btn btn-primary"
-                                      >
-                                        Send Message
-                                      </button>
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                      <!-- Footer -->
-                      <div id="footer"></div>
-                      <!-- Bootstrap JS -->
-                      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-                      <!-- Custom JS -->
-                      <script src="script.js"></script>
-
-                      <!-- Back to Top Button -->
-                      <button
-                        id="backToTop"
-                        title="Back to Top"
-                        class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center back-to-top-btn"
-                      >
-                        <i class="fas fa-arrow-up text-light"></i>
-                      </button>
-
-                      <!-- Add this script for back to top button functionality -->
-                      <script>
-                        document.addEventListener(
-                          "DOMContentLoaded",
-                          function () {
-                            const backToTopButton =
-                              document.getElementById("backToTop");
-
-                            // Show button when user scrolls down 300px
-                            window.addEventListener("scroll", function () {
-                              if (window.scrollY > 300) {
-                                backToTopButton.style.opacity = "1";
-                              } else {
-                                backToTopButton.style.opacity = "0";
-                              }
-                            });
-
-                            // Smooth scroll to top when button is clicked
-                            backToTopButton.addEventListener(
-                              "click",
-                              function () {
-                                window.scrollTo({
-                                  top: 0,
-                                  behavior: "smooth",
-                                });
-                              }
-                            );
-                          }
-                        );
-                      </script>
-                    </body>
-                  </html>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 mt-0 bg-dark">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle text-primary">TESTIMONIALS</small>
+          <h2 class="section-title text-white">What Our Residents Say</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card p-4">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">
+                "Smart Living has transformed my work-life balance. The
+                amenities and services are top-notch, and the community is
+                amazing!"
+              </p>
+              <div class="testimonial-author d-flex align-items-center">
+                <img
+                  src="./images/client/client1.png"
+                  alt="Sarah Johnson"
+                  class="rounded-circle me-3"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div>
+                  <h5 class="mb-0">Sarah Johnson</h5>
+                  <small class="text-muted">Software Engineer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card p-4">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">
+                "The convenience of having meals and housekeeping taken care of
+                has given me more time to focus on my career. Highly
+                recommended!"
+              </p>
+              <div class="testimonial-author d-flex align-items-center">
+                <img
+                  src="./images/client/client2.png"
+                  alt="Michael Chen"
+                  class="rounded-circle me-3"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div>
+                  <h5 class="mb-0">Michael Chen</h5>
+                  <small class="text-muted">Marketing Manager</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card p-4">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">
+                "The community here is fantastic. I've made great friends and
+                the staff is always helpful. It's truly a home away from home."
+              </p>
+              <div class="testimonial-author d-flex align-items-center">
+                <img
+                  src="./images/client/client3.png"
+                  alt="Priya Sharma"
+                  class="rounded-circle me-3"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <div>
+                  <h5 class="mb-0">Priya Sharma</h5>
+                  <small class="text-muted">Business Analyst</small>
                 </div>
               </div>
             </div>
@@ -1584,5 +925,368 @@
         </div>
       </div>
     </section>
-  </body>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 mt-0 bg-light">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle">FAQ</small>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    What is included in the rent?
+                  </button>
+                </h3>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    The rent includes fully furnished accommodation, all
+                    utilities, high-speed internet, housekeeping, and access to
+                    all amenities. Additional services like laundry and meals
+                    are available at extra cost.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    How long is the minimum stay?
+                  </button>
+                </h3>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    The minimum stay period is 3 months. We offer flexible lease
+                    terms of 3, 6, and 12 months with different pricing options.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Is there a security deposit?
+                  </button>
+                </h3>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, we require a security deposit equivalent to one month's
+                    rent. This is refundable at the end of your stay, subject to
+                    property condition.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    Can I have guests over?
+                  </button>
+                </h3>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, you can have guests over. We have a guest policy that
+                    allows overnight stays for up to 3 nights. Please inform the
+                    management in advance.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5 mt-0 bg-dark">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <small class="section-subtitle text-primary">BLOG</small>
+          <h2 class="section-title text-white">Latest Updates</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="blog-card">
+              <img
+                src="./images/Home_page/kitchen-hero.jpg"
+                alt="New Property"
+                class="img-fluid rounded-top"
+                loading="lazy"
+              />
+              <div class="blog-content p-4">
+                <div class="blog-meta mb-2">
+                  <span class="text-muted"
+                    ><i class="far fa-calendar-alt me-2"></i>March 15,
+                    2024</span
+                  >
+                </div>
+                <h4>New Property Launch in Vadodara</h4>
+                <p>
+                  We're excited to announce our newest property in the heart of
+                  Vadodara, featuring modern amenities and premium services.
+                </p>
+                <a href="#" class="btn btn-link p-0"
+                  >Read More <i class="fas fa-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="blog-card">
+              <img
+                src="./images/Home_page/common_area.jpg"
+                alt="Community Event"
+                class="img-fluid rounded-top"
+                loading="lazy"
+              />
+              <div class="blog-content p-4">
+                <div class="blog-meta mb-2">
+                  <span class="text-muted"
+                    ><i class="far fa-calendar-alt me-2"></i>March 10,
+                    2024</span
+                  >
+                </div>
+                <h4>Community Meet & Greet</h4>
+                <p>
+                  Join us for our monthly community event where residents can
+                  network and build lasting connections.
+                </p>
+                <a href="#" class="btn btn-link p-0"
+                  >Read More <i class="fas fa-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="blog-card">
+              <img
+                src="./images/Home_page/fitnes.jpg"
+                alt="New Amenity"
+                class="img-fluid rounded-top"
+                loading="lazy"
+              />
+              <div class="blog-content p-4">
+                <div class="blog-meta mb-2">
+                  <span class="text-muted"
+                    ><i class="far fa-calendar-alt me-2"></i>March 5, 2024</span
+                  >
+                </div>
+                <h4>New Fitness Center Opening</h4>
+                <p>
+                  Our state-of-the-art fitness center is now open 24/7 with new
+                  equipment and personal training services.
+                </p>
+                <a href="#" class="btn btn-link p-0"
+                  >Read More <i class="fas fa-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mt-0 py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Get in Touch</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="contact-info-wrapper">
+              <div class="contact-info p-4 bg-light rounded-3 mb-4">
+                <h3 class="mb-4">Contact Information</h3>
+                <div class="d-flex mb-3">
+                  <i class="fas fa-map-marker-alt text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h5 class="mb-1">Our Location</h5>
+                    <p class="mb-0">
+                      123 Smart Living Avenue, Alkapuri, Vadodara, Gujarat
+                      390007
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <i class="fas fa-phone text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h5 class="mb-1">Phone Number</h5>
+                    <p class="mb-0">+91 98765 43210</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <i class="fas fa-envelope text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h5 class="mb-1">Email Address</h5>
+                    <p class="mb-0">info@smartliving.com</p>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <i class="fas fa-clock text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h5 class="mb-1">Working Hours</h5>
+                    <p class="mb-0">Monday - Sunday: 9:00 AM - 8:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              <div class="map-container rounded-3 overflow-hidden shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.676483456456!2d73.1814!3d22.3072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzI1LjkiTiA3M8KwMTAnNTMuMSJF!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-form-wrapper p-4 bg-white rounded-3 shadow-sm">
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name" class="form-label">Your Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="subject" class="form-label">Subject</label>
+                      <select class="form-select" id="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="booking">Book a Visit</option>
+                        <option value="pricing">Pricing Inquiry</option>
+                        <option value="services">Services Information</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="message" class="form-label"
+                        >Your Message</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="4"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      title="Back to Top"
+      class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center back-to-top-btn"
+    >
+      <i class="fas fa-arrow-up text-light"></i>
+    </button>
+
+    <!-- Add this script for back to top button functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("backToTop");
+
+        // Show button when user scrolls down 300px
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            backToTopButton.style.opacity = "1";
+          } else {
+            backToTopButton.style.opacity = "0";
+          }
+        });
+
+        // Smooth scroll to top when button is clicked
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    
+
+    </body>
 </html>

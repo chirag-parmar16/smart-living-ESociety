@@ -421,7 +421,7 @@
                 role="tab"
               >
                 <h5 class="mb-1">Basic Living</h5>
-                <p class="mb-0 text-muted">₹15,000/month</p>
+                <p class="mb-0 text-muted">₹18,000/month</p>
               </a>
               <a
                 class="list-group-item list-group-item-action"
@@ -431,7 +431,7 @@
                 role="tab"
               >
                 <h5 class="mb-1">Premium Living</h5>
-                <p class="mb-0 text-muted">₹25,000/month</p>
+                <p class="mb-0 text-muted">₹30,000/month</p>
               </a>
               <a
                 class="list-group-item list-group-item-action"
@@ -441,7 +441,18 @@
                 role="tab"
               >
                 <h5 class="mb-1">Luxury Living</h5>
-                <p class="mb-0 text-muted">₹40,000/month</p>
+                <p class="mb-0 text-muted">₹50,000/month</p>
+              </a>
+              <!-- Custom Package Tab -->
+              <a
+                class="list-group-item list-group-item-action"
+                id="custom-tab"
+                data-bs-toggle="list"
+                href="#custom"
+                role="tab"
+              >
+                <h5 class="mb-1">Custom Package</h5>
+                <p class="mb-0 text-muted">Create Your Own</p>
               </a>
             </div>
           </div>
@@ -632,7 +643,7 @@
                   </div>
 
                   <button class="btn btn-primary btn-lg">
-                    Select Basic Package - ₹15,000/month
+                    Select Basic Package - ₹18,000/month
                   </button>
                 </div>
               </div>
@@ -823,7 +834,7 @@
                   </div>
 
                   <button class="btn btn-primary btn-lg">
-                    Select Premium Package - ₹25,000/month
+                    Select Premium Package - ₹30,000/month
                   </button>
                 </div>
               </div>
@@ -1024,8 +1035,345 @@
                   </div>
 
                   <button class="btn btn-primary btn-lg">
-                    Select Luxury Package - ₹40,000/month
+                    Select Luxury Package - ₹50,000/month
                   </button>
+                </div>
+              </div>
+              <!-- Custom Package Form Tab -->
+              <div class="tab-pane fade" id="custom" role="tabpanel">
+                <div class="package-content">
+                  <h2 class="mb-4">Custom Package Request</h2>
+                  <p class="lead mb-4">
+                    Design your own living experience! Fill out the form below
+                    to let us know your specific requirements and we will get
+                    back to you with a personalized package.
+                  </p>
+                  <form id="customPackageForm">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="customName" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="customName"
+                          name="name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="customEmail" class="form-label"
+                          >Email</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="customEmail"
+                          name="email"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="customPhone" class="form-label"
+                          >Phone</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="customPhone"
+                          name="phone"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="roomType" class="form-label"
+                          >Room Type</label
+                        >
+                        <select
+                          class="form-select"
+                          id="roomType"
+                          name="roomType"
+                          required
+                        >
+                          <option value="">Select...</option>
+                          <option>Single Occupancy</option>
+                          <option>Deluxe Single</option>
+                          <option>Executive Suite</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="roomSize" class="form-label"
+                          >Room Size (sq. ft.)</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="roomSize"
+                          name="roomSize"
+                          min="80"
+                          max="1000"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">Meals Required</label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="meals"
+                            value="Breakfast"
+                            id="mealBreakfast"
+                          />
+                          <label class="form-check-label" for="mealBreakfast"
+                            >Breakfast</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="meals"
+                            value="Lunch"
+                            id="mealLunch"
+                          />
+                          <label class="form-check-label" for="mealLunch"
+                            >Lunch</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="meals"
+                            value="Dinner"
+                            id="mealDinner"
+                          />
+                          <label class="form-check-label" for="mealDinner"
+                            >Dinner</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="meals"
+                            value="Special Diet"
+                            id="mealSpecial"
+                          />
+                          <label class="form-check-label" for="mealSpecial"
+                            >Special Diet</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="housekeeping" class="form-label"
+                          >Housekeeping Frequency</label
+                        >
+                        <select
+                          class="form-select"
+                          id="housekeeping"
+                          name="housekeeping"
+                        >
+                          <option value="">Select...</option>
+                          <option>Daily</option>
+                          <option>Weekly</option>
+                          <option>Bi-weekly</option>
+                          <option>On Demand</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="maintenance" class="form-label"
+                          >Maintenance Priority</label
+                        >
+                        <select
+                          class="form-select"
+                          id="maintenance"
+                          name="maintenance"
+                        >
+                          <option value="">Select...</option>
+                          <option>Standard</option>
+                          <option>Priority</option>
+                          <option>24/7</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="internet" class="form-label"
+                          >Internet Speed</label
+                        >
+                        <select
+                          class="form-select"
+                          id="internet"
+                          name="internet"
+                        >
+                          <option value="">Select...</option>
+                          <option>50 Mbps</option>
+                          <option>100 Mbps</option>
+                          <option>500 Mbps</option>
+                          <option>Custom</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">Security Features</label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="security"
+                            value="CCTV"
+                            id="securityCCTV"
+                          />
+                          <label class="form-check-label" for="securityCCTV"
+                            >CCTV</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="security"
+                            value="Biometric Access"
+                            id="securityBiometric"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="securityBiometric"
+                            >Biometric Access</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="security"
+                            value="Escort"
+                            id="securityEscort"
+                          />
+                          <label class="form-check-label" for="securityEscort"
+                            >Private Escort</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="security"
+                            value="Visitor Management"
+                            id="securityVisitor"
+                          />
+                          <label class="form-check-label" for="securityVisitor"
+                            >Visitor Management</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">Facilities Access</label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="facilities"
+                            value="Fitness Center"
+                            id="facilityFitness"
+                          />
+                          <label class="form-check-label" for="facilityFitness"
+                            >Fitness Center</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="facilities"
+                            value="Spa"
+                            id="facilitySpa"
+                          />
+                          <label class="form-check-label" for="facilitySpa"
+                            >Spa</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="facilities"
+                            value="Lounge"
+                            id="facilityLounge"
+                          />
+                          <label class="form-check-label" for="facilityLounge"
+                            >Private Lounge</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="facilities"
+                            value="Business Center"
+                            id="facilityBusiness"
+                          />
+                          <label class="form-check-label" for="facilityBusiness"
+                            >Business Center</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="facilities"
+                            value="Other"
+                            id="facilityOther"
+                          />
+                          <label class="form-check-label" for="facilityOther"
+                            >Other</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check mt-4">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="assistant"
+                            value="Yes"
+                            id="assistant"
+                          />
+                          <label class="form-check-label" for="assistant"
+                            >Personal Assistant/Concierge Required</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="customRequirements" class="form-label"
+                          >Additional Requirements</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="customRequirements"
+                          name="requirements"
+                          rows="4"
+                          placeholder="Describe any other preferences or needs..."
+                        ></textarea>
+                      </div>
+                    </div>
+                    <!-- Estimated Price Section -->
+                    <div class="my-4">
+                      <h5>
+                        Estimated Price:
+                        <span id="customPrice" class="text-primary">₹0</span>
+                        /month
+                      </h5>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg mt-4">
+                      Submit Request
+                    </button>
+                  </form>
+                  <div
+                    id="customFormSuccess"
+                    class="alert alert-success mt-3 d-none"
+                    role="alert"
+                  >
+                    Thank you! Your custom package request has been submitted.
+                  </div>
                 </div>
               </div>
             </div>
@@ -1095,6 +1443,91 @@
             targetPane.classList.add("show", "active");
           });
         });
+
+        // Custom Package Form Submission
+        const customForm = document.getElementById("customPackageForm");
+        const priceDisplay = document.getElementById("customPrice");
+        function calculateCustomPrice() {
+          let price = 0;
+          // Room Type
+          const roomType = document.getElementById("roomType").value;
+          if (roomType === "Single Occupancy") price += 13000;
+          else if (roomType === "Deluxe Single") price += 22000;
+          else if (roomType === "Executive Suite") price += 40000;
+          else if (roomType === "Other") price += 10000;
+          // Room Size (extra for >200 sq ft)
+          const roomSize = parseInt(
+            document.getElementById("roomSize").value || 0
+          );
+          if (roomSize > 200) price += (roomSize - 200) * 30;
+          // Meals
+          const meals = Array.from(
+            document.querySelectorAll('input[name="meals"]:checked')
+          ).map((e) => e.value);
+          if (meals.includes("Breakfast")) price += 800;
+          if (meals.includes("Lunch")) price += 1000;
+          if (meals.includes("Dinner")) price += 1200;
+          if (meals.includes("Special Diet")) price += 1500;
+          // Housekeeping
+          const housekeeping = document.getElementById("housekeeping").value;
+          if (housekeeping === "Daily") price += 2000;
+          else if (housekeeping === "Weekly") price += 700;
+          else if (housekeeping === "Bi-weekly") price += 400;
+          else if (housekeeping === "On Demand") price += 1000;
+          // Maintenance
+          const maintenance = document.getElementById("maintenance").value;
+          if (maintenance === "Priority") price += 500;
+          else if (maintenance === "24/7") price += 1000;
+          // Internet
+          const internet = document.getElementById("internet").value;
+          if (internet === "100 Mbps") price += 300;
+          else if (internet === "500 Mbps") price += 800;
+          else if (internet === "Custom") price += 500;
+          // Security
+          const security = document.querySelectorAll(
+            'input[name="security"]:checked'
+          ).length;
+          price += security * 300;
+          // Facilities
+          const facilities = document.querySelectorAll(
+            'input[name="facilities"]:checked'
+          ).length;
+          price += facilities * 500;
+          // Assistant
+          if (document.getElementById("assistant").checked) price += 1000;
+          // Show price
+          priceDisplay.textContent = `₹${price.toLocaleString()}`;
+        }
+        // Attach event listeners to all relevant fields
+        [
+          "roomType",
+          "roomSize",
+          "housekeeping",
+          "maintenance",
+          "internet",
+        ].forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.addEventListener("change", calculateCustomPrice);
+        });
+        document
+          .querySelectorAll(
+            'input[name="meals"], input[name="security"], input[name="facilities"], #assistant'
+          )
+          .forEach((el) => {
+            el.addEventListener("change", calculateCustomPrice);
+          });
+        // Initial calculation
+        calculateCustomPrice();
+        if (customForm) {
+          customForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            document
+              .getElementById("customFormSuccess")
+              .classList.remove("d-none");
+            customForm.reset();
+            calculateCustomPrice();
+          });
+        }
       });
     </script>
   </body>

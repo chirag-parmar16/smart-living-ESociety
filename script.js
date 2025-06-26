@@ -128,10 +128,3 @@ fetch("../component/footer.html")
   .then((data) => {
     document.getElementById("footer").innerHTML = data;
   });
-
-// Load Common Links
-fetch("../component/link.html")
-  .then((res) => res.text())
-  .then((data) => {
-    document.getElementById("common-links").innerHTML = data;
-  });

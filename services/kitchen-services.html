@@ -604,21 +604,50 @@
                       </div>
 
                       <div class="mb-3">
-                        <label for="mealTime" class="form-label"
-                          >Meal Time</label
+                        <label class="form-label"
+                          >Meal Time (You can select multiple)</label
                         >
-                        <select class="form-select" id="mealTime" required>
-                          <option value="">Select Meal Time</option>
-                          <option value="breakfast">
-                            Breakfast (7:00 AM - 10:00 AM)
-                          </option>
-                          <option value="lunch">
-                            Lunch (12:00 PM - 3:00 PM)
-                          </option>
-                          <option value="dinner">
-                            Dinner (7:00 PM - 10:00 PM)
-                          </option>
-                        </select>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="mealTime"
+                            id="mealTimeBreakfast"
+                            value="breakfast"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="mealTimeBreakfast"
+                            >Breakfast (7:00 AM - 10:00 AM)</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="mealTime"
+                            id="mealTimeLunch"
+                            value="lunch"
+                          />
+                          <label class="form-check-label" for="mealTimeLunch"
+                            >Lunch (12:00 PM - 3:00 PM)</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="mealTime"
+                            id="mealTimeDinner"
+                            value="dinner"
+                          />
+                          <label class="form-check-label" for="mealTimeDinner"
+                            >Dinner (7:00 PM - 10:00 PM)</label
+                          >
+                        </div>
+                        <small class="form-text text-muted"
+                          >You can select one or more meal times.</small
+                        >
                       </div>
 
                       <div class="mb-3">
